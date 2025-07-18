@@ -6,75 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="mihail, cv, resume">
     <meta name="description" content="Резюме Михаила Цаплина">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Mihail Resume</title>
 </head>
 <body>
 
-    <!-- Аватарка -->
-    <img src="avatar.jpg" alt="Аватарка" width="200px"><br>
-
-    <!-- Заголовок первого уровня -->
-    <h1>Михаил Цаплин</h1>
+    <!-- Аватарка и ФИО -->
+    <section class="card">
+        <img src="avatar.jpg" alt="Аватарка" width="200px"><br>
+        <h1>Михаил Цаплин</h1>
+    </section>
 
     <!-- Информация о себе -->
-    <p><strong>Привет!</strong> Меня зовут Михаил Цаплин.</p>
-    <p>Я увлекаюсь <em>программированием</em> и люблю изучать новые технологии.</p>
-    <p>Пробую создавать красивые и функциональные <strong>сайты</strong>.</p>
+    <section class="card">
+        <p><strong>Привет!</strong> Меня зовут Михаил Цаплин.</p>
+        <p>Я увлекаюсь <em>программированием</em> и люблю изучать новые технологии.</p>
+        <p>Пробую создавать красивые и функциональные <strong>сайты</strong>.</p>
+    </section>
 
     <!-- Хобби -->
-    <h2>Мои хобби:</h2>
-    <ol>
-        <li>Чтение книг</li>
-        <li>Прогулки</li>
-        <li>Спорт</li>
-    </ol>
+    <section class="card">
+        <h2>Мои хобби:</h2>
+        <ol style="list-style-position: inside;">
+            <li>Чтение книг</li>
+            <li>Прогулки</li>
+            <li>Спорт</li>
+        </ol>
+    </section>
 
     <!-- Опыт работы -->
-    <h2>Опыт работы</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Название работы</th>
-                <th>Должность</th>
-                <th>Период работы</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>ОГКУ "Лесничество ЕАО"</td>
-                <td>Лесничий</td>
-                <td>2011 - настоящее время</td>
-            </tr>
-        </tbody>
-    </table>
+    <section class="card">
+        <h2>Опыт работы</h2>
+        <table class="centered-table">
+            <thead>
+                <tr>
+                    <th>Название работы</th>
+                    <th>Должность</th>
+                    <th>Период работы</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ОГКУ "Лесничество ЕАО"</td>
+                    <td>Лесничий</td>
+                    <td>2011 - настоящее время</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <!-- Социальные сети -->
-    <h4>Список социальных сетей:</h4>
-    <a href="https://vk.com/id156771904" target="_blank">VK</a> |
-    <a href="https://t.me/@MikhailTsaplin" target="_blank">Telegram</a> |
-    <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+    <section class="card">
+        <h4>Список социальных сетей:</h4>
+        <a href="https://vk.com/id156771904" target="_blank" class="btn-link">VK</a> |
+        <a href="https://t.me/@MikhailTsaplin" target="_blank" class="btn-link">Telegram</a> |
+        <a href="https://instagram.com/yourprofile" target="_blank" class="btn-link">Instagram</a>
+    </section>
 
     <!-- Форма обратной связи -->
-    <h2>Связаться со мной</h2>
-    <form action="/send_form.php" method="post">
-        <div>
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-        </div>
-    <br>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@example.com" required>
-        </div>
-    <br>
-        <div>
-            <label for="message">Сообщение:</label>
-            <textarea id="message" name="message" rows="4" cols="50" placeholder="Введите ваше сообщение" required></textarea>
-        </div>
-    <br><br>
-        <input type="submit" value="Отправить">
-    </form>
+    <section class="card contact-form">
+        <h2>Связаться со мной</h2>
+        <form action="/send_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" cols="50" placeholder="Введите ваше сообщение" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Отправить" class="btn">
+            </div>
+        </form>
+    </section>
 
 </body>
 </html>

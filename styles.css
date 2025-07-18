@@ -1,11 +1,5 @@
-/* Общие настройки */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Подключение шрифта Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Импортируем шрифт Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -15,60 +9,132 @@ body {
     text-align: center;
 }
 
-/* Шапка страницы */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    background-color: #fff;
-    position: relative;
-    z-index: 1000;
+section.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Изображение аватарки */
-img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform .3s ease-in-out;
+.card:nth-of-type(1) {
+    background-color: #FFEBD5; /* мягкий персиковый оттенок */
 }
 
-img:hover {
-    transform: scale(1.05);
+.card:nth-of-type(2) {
+    background-color: #D1ECFE; /* нежный голубой оттенок */
 }
 
-/* Основная информация */
-h1 {
-    font-size: 3rem;
-    margin-top: 2rem;
+.card:nth-of-type(3) {
+    background-color: #DAFCEB; /* светло-зеленый оттенок */
+}
+
+.card:nth-of-type(4) {
+    background-color: #FAEDCD; /* кремовый оттенок */
+}
+
+.card:nth-of-type(5) {
+    background-color: #EAF2FB; /* очень светлый голубой оттенок */
+}
+
+.card:nth-of-type(6) {
+    background-color: #FFFBEA; /* очень светлый лимонный оттенок */
+}
+
+h1, h2, h4 {
     color: #333;
 }
 
-p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+/* Стилизация ссылок */
+a {
+    color: #007bff; /* Основной цвет ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Список увлечений */
-h2 {
-    font-size: 2rem;
-    margin-top: 3rem;
-    color: #333;
+a:visited {
+    color: #6c757d; /* Посещённые ссылки становятся серыми */
 }
 
-ol {
-    list-style-type: decimal;
-    padding-left: 2rem;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+a:hover {
+    color: #0056b3; /* При наведении становится темно-синим */
 }
 
-/* Таблица опыта работы */
-table {
+a:active {
+    color: #dc3545; /* При клике красная активная ссылка */
+}
+
+/* Общий класс для кнопок */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    background-color: #dc3545;
+}
+
+/* Дополнительный класс для контактной формы */
+.contact-form {
+    text-align: left; /* Тексты слева */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Возможность растягивать вертикально */
+}
+
+/* Кнопка отправки */
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Остальные стили остаются неизменными */
+
+.centered-table {
+    margin: 0 auto; /* Центровка таблицы */
     width: 100%;
     border-collapse: collapse;
     margin-top: 2rem;
@@ -76,8 +142,7 @@ table {
     font-size: 1.2rem;
 }
 
-th,
-td {
+th, td {
     padding: 1rem;
     text-align: left;
     border: 1px solid #ddd;
@@ -88,100 +153,33 @@ th {
     font-weight: bold;
 }
 
-/* Блок социальных сетей */
-h4 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    color: #333;
+ol {
+    list-style-position: inside; /* Красиво расположим нумерацию */
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    margin-right: 1rem;
-    transition: color .3s ease-in-out;
+form label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
 }
 
-a:hover {
-    color: #0056b3;
-}
-
-/* Контактная форма */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 0.8rem;
+form input, form textarea {
+    width: calc(100% - 110px);
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
 }
 
-textarea {
-    resize: vertical;
-}
-
-input[type="submit"] {
-    background-color: #007bff;
+form button, form input[type='submit'] {
+    background-color: #4CAF50;
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color .3s ease-in-out;
 }
 
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Подвал страницы */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Медиазапросы для адаптивности */
-@media screen and (max-width: 768px) {
-    img {
-        max-width: 150px;
-    }
-    
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    form {
-        padding: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    table {
-        overflow-x: scroll;
-    }
+form button:hover, form input[type='submit']:hover {
+    background-color: #45a049;
 }

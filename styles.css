@@ -1,0 +1,185 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Шапка страницы */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Изображение аватарки */
+img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Основная информация */
+h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Список увлечений */
+h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    color: #333;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Таблица опыта работы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Блок социальных сетей */
+h4 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color .3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Контактная форма */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Подвал страницы */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 768px) {
+    img {
+        max-width: 150px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    form {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    table {
+        overflow-x: scroll;
+    }
+}

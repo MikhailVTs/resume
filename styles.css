@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Подключение шрифта Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -13,8 +15,7 @@ body {
     text-align: center;
 }
 
-/* Подключение шрифта Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 
 

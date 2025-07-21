@@ -9,6 +9,12 @@ body {
     text-align: center;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 section.card {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -16,6 +22,7 @@ section.card {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .card:nth-of-type(1) {
@@ -58,11 +65,11 @@ a:visited {
 }
 
 a:hover {
-    color: #0056b3; /* При наведении становится темно-синим */
+    color: #0056b3; /* При наведении становится тёмно-синим */
 }
 
 a:active {
-    color: #dc3545; /* При клике красная активная ссылка */
+    color: #dc3545; /* При клике — красная активная ссылка */
 }
 
 /* Общий класс для кнопок */
@@ -86,7 +93,7 @@ a:active {
     background-color: #dc3545;
 }
 
-/* Дополнительный класс для контактной формы */
+/* Контактная форма */
 .contact-form {
     text-align: left; /* Тексты слева */
     max-width: 600px;
@@ -103,13 +110,16 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Полностью занимаем контейнер */
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 4px;
     margin-bottom: 15px;
     font-size: 16px;
+    box-sizing: border-box; /* Важно для правильного отображения ширины */
 }
 
 textarea {
@@ -131,8 +141,7 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
-/* Остальные стили остаются неизменными */
-
+/* Таблица опыта работы */
 .centered-table {
     margin: 0 auto; /* Центровка таблицы */
     width: 100%;
@@ -142,7 +151,8 @@ button[type="submit"]:hover {
     font-size: 1.2rem;
 }
 
-th, td {
+th,
+td {
     padding: 1rem;
     text-align: left;
     border: 1px solid #ddd;
@@ -153,25 +163,23 @@ th {
     font-weight: bold;
 }
 
-ol {
-    list-style-position: inside; /* Красиво расположим нумерацию */
+/* Списки */
+ul {
+    list-style-position: inside; /* Красиво расположим маркеры */
+    padding-left: 0;
 }
 
-form label {
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-    margin-right: 10px;
-}
-
-form input, form textarea {
-    width: calc(100% - 110px);
+/* Форматирование форм */
+form input,
+form textarea {
+    width: 100%; /* Поля занимают всю доступную ширину */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-form button, form input[type='submit'] {
+form button,
+form input[type='submit'] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -180,6 +188,33 @@ form button, form input[type='submit'] {
     cursor: pointer;
 }
 
-form button:hover, form input[type='submit']:hover {
+form button:hover,
+form input[type='submit']:hover {
     background-color: #45a049;
+}
+
+/* Центрирование картинок */
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Убираем подчёркивание ссылок */
+a {
+    text-decoration: none;
+}
+
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 600px) {
+    section.card {
+        padding: 10px;
+    }
+
+    img {
+        width: 100%; /* Подстраиваем картинку под экран */
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
 }
